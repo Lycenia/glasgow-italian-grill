@@ -1,0 +1,488 @@
+/* Hello :) */
+/* Setting the scroll behaviour of the page (for back to top button) - ensuring that user has NOT turned off reduced motion */
+@media screen and (prefers-reduced-motion: no-preference){
+html{
+	scroll-behavior: smooth;
+}
+/* Setting the height to full page and removing L/R padding as default */
+}
+html, body{
+	height: 100%;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin: 0;
+}
+/* Removing margins as default and makes all elements sized with box-sizing */
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+/* Styling header - always 100% width, fixed position and stacks above everything (Zpos) */
+header {
+	background: #70867f;
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	border-bottom: 3px solid #46534f;
+}
+/* Keeps the nav links centered in the bar */
+nav {
+	height: inherit;
+}
+/* Turns off ugly standard style for links on the whole page */
+a {
+	text-decoration: none;
+}
+/* Changes the hover of links to red */
+a:hover {
+  color: #46534f !important;
+}
+/* Heading styles. Using rem as much as possible as to keep the whole site responsive. Using google fonts and setting sans-serif
+as basic if they don't work in the user's browser */
+h1 {
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	font-size: 1.8rem;
+	color:#70867f;
+	text-shadow: 1px 1px black;
+}
+h2 {
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	font-size: 1.7rem;
+	color:#70867f;
+	text-shadow: 1px 1px black;
+}
+h3 {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding-bottom: .5rem;
+}
+/* Aligning unclassed/ID'd paragraphs to center and adding a small bottom margin */
+p {
+	font-size: .75rem;
+	margin-bottom: .063rem;
+	text-align: center;
+	max-width: 80%;
+}
+/* Styling the sticky footer and adding padding then styling the link and hover in the footer */
+footer {
+    background: #70867f;
+    padding: .5rem 0 .5rem 0;
+    border-top: 3px solid #46534f;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover {
+    color: #46534f;
+}
+/* Aligning the footer and its wrapper */
+footer, #footerpusher {
+	padding-left: .25rem;
+	padding-right: .25rem;
+}
+/* Moving the quote caption over cause it looks better */
+figcaption{
+	text-align: right;
+}
+/* Using the embedding code youtube provides includes iFrame which doesn't validate.
+This is my work-around. It seems to work fine? */
+object{
+
+	height: 15rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+/* Styling the text areas in the  */
+input[type=text], textarea {
+  width: 100%; /* Full width */
+  padding: .75rem; /* Some padding */ 
+  border: 1px solid #70867f; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* I wanted the current nav link to be #70867f - this seems to work quite well? */
+#current a{
+	color:#46534f !important;
+}
+/* Alinging the menu - made sure to remove the styled bullets for elsewhere.
+Flex makes the sit nicely on the same line */
+#menu {
+	list-style-type: none;
+	display: flex;
+	height: inherit!important;
+	align-items: center;
+	padding: 0 10px;
+	margin-top: 0!important;
+}
+/* Styling the menu list items and links. Cursive if Dancing Script font doesn't work. */
+#menu li {
+	padding: 5px 10px!important;
+}
+#menu a {
+	color: #fff;
+	font-family: 'Dancing Script', cursive;
+	font-size: 1rem;
+}
+/* Aligning the logo - flex shoves the rest of the list items to the right
+while there is space */
+#logo {
+	flex: 1;
+	width: 4.37rem;
+	height: 3.75rem;
+	top: 5px;
+}
+/* Aligning the floating logo crest over the banner. Flex allows it to be responsive
+when the page collapses or is viewed on a small screen */
+#crest{
+	display: flex;
+	justify-content: center;
+}
+/* Giving the crest a max height and adding some padding to the bottom */
+#crest img{
+	max-height: 200px;
+	padding-bottom: 20px;
+}
+/* Positioning and styling the banner. Even made it centered - Cheers Ross. */
+#banner {
+	width: 100% !important;
+	max-height: 18.75rem !important;
+	position: fixed;
+	top: 60px;
+	background-image: url(images/restaurantbanner.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #70867f;
+/* for content alignment */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	border-bottom: solid 3px #70867f;
+}
+/* Styling/aligning the main text on the banner */
+#banner-title {
+	font-size: 1.75rem;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+/* The slider is the container that slides up over the banner on scroll.
+Everything here is pretty self explanitory.
+Must cover 100% of height and width, position is relative so it scrolls over the banner.
+Negative bottom margin removing excess space when fullscreen.  */
+#slider {
+	min-width: 100%;
+	height: 100%;
+	position: relative;
+	top: 400px; 
+	background: white;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: -15%;
+}
+/* Aligning the top content container. Flex and auto width and height allows
+everything to collapse nicely when viewed on small screens. jusfity content/align items
+align content centers everything in the space available.*/
+#topcontainer{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	height: auto;
+	width: auto;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+	font-family: 'Open Sans', sans-serif;
+}
+/* Aligning and styling the sticky footer. The wrapper is the full height of the page
+and pushes the actual footer down and sticks it to the bottom. Removing some excess white
+space with the negative bottom margin. */
+#footerpusher {
+    min-height: 100%;
+    margin: 0 auto -2.43rem;
+}
+/* Also styling the font in the footer. I owe my life to Flex Box. Standing ovation to it. */
+#footercontent{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	color: #fff;
+	font-family: 'Dancing Script', cursive;
+	font-size: .79rem;
+}
+/* Styling the submit button on the contact page */
+#submit {
+	background-color: #70867f;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+/* Styling the link colour of the submit button */
+#submit a{
+	color: white;
+}
+/* Styling the home button on the thanks page */
+#home {
+	background-color: #70867f;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top:2.5rem;
+	margin-bottom:2.5rem;
+}
+/* Styling the link colour of the home button */
+#home a{
+	color: white;
+}
+/* Aligning the button text to center and adding a small margin under the button for alignment. */
+#button{
+	display: block;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+/* Styling the contact info in the banner and footer of each page. Making the div flexbox and adding padding for alignment. */
+.contactinfo{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	padding-bottom:1%;
+	padding-right: 1%;
+	padding-left: 1%;
+}
+/* Styling the text of the paragraph tags within the contact info div. */
+.contactinfo p{
+	font-size:.75rem;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	padding-right: 2rem;
+	text-shadow: 1px 1px black;
+}
+/* Styling the attention grabbing text on multiple pages - colour, size, alignment font and adding some padding on each side. */
+.herotext  {
+	font-size: 1.2rem !important;
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	color: #70867f;
+	max-width: 100%;
+	padding:1rem;
+}
+/* Styling the links in any herotext divs */
+.herotext a{
+	color: #46534f;
+}
+/* Styling the hover of the links in any hero text divs */
+.herotext a:hover{
+	color: #70867f!important;
+}
+/* Making the bottom content wrappers flexbox <3 Adding padding to make it sit nicely.
+Styling the font. */
+.maincontent{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	text-align:center;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+}
+/* Making the bottom content div flexbox. Adding some padding either side to ensure content displays and collapses properly on different screen sizes */
+.bottomcontent{
+	display:flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	text-align:center;
+	padding-top: 3%;
+	font-family: 'Open Sans', sans-serif;
+/* Adding a negative margin to remove some white space because of the sticky footer */
+	margin-bottom: -10rem;
+}
+/* Styling images in the bottom content div - adding a border and removing corners because fancy? */
+.bottomcontent img{
+	border: solid;
+	border-color:#70867f;
+	border-radius: 30%; 
+}
+
+/* Adding a bit of padding to the h2 headings in the bottomcontent section */
+.bottomcontent h2{
+	padding-bottom: 1rem;
+}
+/* Styling the div containing the social media icons - the font size dictates their size. The padding is to make 'em sit right.*/
+.socials{
+	font-size: 5em;
+	padding-top:2rem;
+}
+/* Styling the hover colour for the social media buttons*/
+.socials a{
+	color: #70867f;
+}
+/* Styling the small, clickable portraits on the home page. */
+.homenav img{
+	border: solid;
+	border-color:#70867f;
+    width: 12rem;
+    height: 12rem;
+}
+/* My nice, smooth back to top button... It only works properly after you've clicked it the first time.
+It's just a reference to an anchor tag at the top of the page. This is styling the button. */
+.jumpup {
+	font-family: 'Dancing Script', cursive;
+	color: white;
+	background-color: #46534f;
+	border: 1px solid;
+	border-color: white;
+	padding: 5px 5px;
+	font-size: .75rem;
+	cursor: pointer;
+}
+/* Styling the scrollbar because default is ugly as hell. */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  background: #46534f; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #70867f; 
+}
+/* Styling the image grid on the menu page - Setting some variables - the gap between the images, the number of colums and the height of the rows. */
+.image-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --row-height: 250px;
+/* Border box with the padding as the variable we just made, ensures the padding does not increase the entire width of the container */
+  box-sizing: border-box;
+  padding: var(--gap);
+/* Calling the CSS grid */
+  display: grid;
+/* Calling for 4 columns of equal width in the grid - using the num-cols variable created earlier.*/
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+/* Calling for however many 250px rows in the grid that will fit on the page */
+  grid-auto-rows: var(--row-height);
+/* Adding a gap between each image using the 16px gap variable */
+  gap: var(--gap);
+}
+/* Adding 100% width and height to constrain each image to its grid cell. */
+.image-grid > img {
+  width: 100%;
+  height: 100%;
+/* Maintains the aspect ratio of the images as they're resized. */
+  object-fit: cover;
+}
+/* Adding an extra div for interest - any images with this class will take up 2 columns */
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+/* Adding an extra div for interest - any images with this class will take up 2 rows */
+.image-grid-row-2 {
+  grid-row: span 2;
+}
+/* Media query to ensure the images display in 3 columns when the site is being viewed on a tablet/anything under 1024px but over 768px */
+@media screen and (max-width: 768px) {
+  .image-grid {
+    --num-cols: 3;
+/* Shrinking the images down from 250px to 100px when viewed on a tablet */
+    --row-height: 100px;
+  }
+}
+/* Media query to ensure the images display in 2 columns when the site is being viewed on a mobile/anything under 768px */
+@media screen and (max-width: 700px) {
+  .image-grid {
+    --num-cols: 2;
+/* Shrinking the images down from 250px to 100px when viewed on a mobile */
+    --row-height: 100px;
+  }
+}
+/* Centering the text within the wrapper class for the bios on the staff page */
+.wrapper{
+  text-align: center;
+}
+/* Making the large div holding the images, text and names of staff in the bios flexbox. Aligning everything to be centered. */
+.our_team{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+/* Adding a width , margin (all four sides), background colour and padding to the large team container and the individual staff member's containers */
+.our_team .team_member{
+  width: 15.6rem;
+  margin: 5px;
+  background: #fff;
+  padding: 20px 10px;
+}
+/* Adding a max-width, height, margin, relative positioning and 5px padding to every div within the staff bios container*/
+.our_team .team_member .member_img{  
+  max-width: 11.7rem;
+  height: 11.7rem;
+  margin: 0 auto;
+  padding: 5px;
+  position: relative;
+}
+/* Making the images in the staff containers 100% height and width. Also adding a border to each. */
+.member_img img{
+	width: 100%;
+	height: 100%;
+	border: solid;
+	border-color:#70867f;
+}
+/* Styling the h3 headers (the names) of each of the team members. Adding a margin for alignment */
+.team_member h3{
+  font-family: 'Dancing Script', cursive;
+  color: #70867f;
+  font-size: 1.25rem;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0px;
+}
+/* Styling the span (inline container) for the job roles under the staff names */
+.team_member span{
+  font-size: 10px;
+}
+/* Styling the paragraph text contained in each of the staff bios. Adding padding and justifying the text. */
+.team_member p{
+  margin-top: 10px;
+  font-size: .75rem;
+  line-height: 20px;
+  padding-left: 20%;
+  text-align: justify;
+}
+/* Styling the text for the placeholder within the contact form text area on the contact page*/
+::-webkit-input-placeholder {
+	font-family: 'Open Sans', sans-serif;
+}
+/* Styling the container for the contact form on the contact page. */
+.container{
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 0;
+	margin-right: 0;
+}

@@ -1,0 +1,132 @@
+<!-- HTML BUT MAKE IT 5??? -->
+<!DOCTYPE html>
+<!-- w3schools said you should add a language so I did -->
+<html lang="en">
+<head>
+<!-- Specifying the character encoding, viewport width, adding keywords, author and description of the page.
+	Also linking the style sheet, google fonts, favicon and the kit for the social media buttons-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Nicola Harrison">
+	<meta name="keywords" content="Italian, Food, Dinner, Restaurant, Glasgow, Grill, Parties, Functions">
+	<meta name="description" content="Glasgow Italian Grill Website">
+    <title>Glasgow Italian Grill | Mama Mia! Here we go again!</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	<script src="https://kit.fontawesome.com/07ae7fcfe2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Creating the main div and nav bar as an unordered list. Adding the logo to the top of it and adding the
+		'current' styling to the link that the page is currently on -->
+<div id="maindiv"> 
+<header>
+    <nav>
+        <ul id="menu">
+			<li id="logo"><a href="home.html"><img src="./images/logomini.png" alt="Glasgow Italian Grill Logo Mini"></a></li>
+            <li><a href="home.html">Home</a></li>
+			<li><a href="menu.html">Menu</a></li>
+			<li id="current"><a href="staff.html">Staff</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Creating the banner, adding the text to it and adding the main crest on top of the banner. -->
+<div id="banner">
+	<h2 id="banner-title">Mama Mia! Here we go again!</h2>
+	<div id="crest">	
+		<img src="./images/logo.png" alt="Glasgow Italian Grill Logo"><br>
+	</div>
+<!-- Creating the div containing the contact info at the top and bottom of the banner -->	
+	<div class="contactinfo"><p class="address">19 Hatfield Drive - Anniesland - G120YE</p><p class="number">0141 9496 0555</p><p class="email">Italian.grill@glasgow</p>
+	</div>
+</div>
+<!-- Creating the slider that holds the content and slides up over the banner -->		
+<section id="slider">
+	<h1>Get to know our wonderful staff - they can't wait to meet you!</h1><br><br>
+<!-- Making the top flex container. This contains the hero text for the staff page -->
+	<div id="topcontainer">			
+			<p class="herotext">Get to know our wonderful staff members!</p>
+	</div>
+<!-- Creating the main content section containing the divs with the staff images/bios. -->					
+	<section class="maincontent">
+		<div class="wrapper">
+			<h2>Our Team</h2>
+			<div class="our_team">
+				<div class="team_member">
+				  <div class="member_img">
+					 <img src="images/staff_Valentina_Iopollo.jpg" alt="Picture of the owner of the restaurant, Valentina Iopollo">
+				  </div>
+				  <h3>Valentina Iopollo</h3>
+				  <span>Head Chef & Owner</span>
+				  <p>Valentina like her brother learnt how to cook from their mother.  Valentina first came to Scotland in the 90s and convinced her brother to start the restaurant. </p>
+				</div>
+				<div class="team_member">
+				  <div class="member_img">
+					 <img src="images/staff_Marco_Iopollo.jpg" alt="Picture of the owner of the restaurant, Marco Iopollo">
+				  </div>
+				  <h3>Marco Iopollo</h3>
+				  <span>Chef & Owner</span>
+				  <p>Marco started the restaurant with his sister. Grew up in Milan. Learnt how to cook from his mother and has worked in kitchens in some of the best restaurants in Milan.</p>
+				</div>
+				<div class="team_member">
+				  <div class="member_img">
+					 <img src="images/staff_Maria_Rossi.jpg" alt="Picture of the manager of the restaurant, Maria Rossi">
+				  </div>
+				  <h3>Maria Rossi</h3>
+				  <span>Manager</span>
+				  <p>Maria joined the restaurant in 2017 as manager.  Maria has managed many restaurants in her career and oversees the recruiting and hiring restaurant staff as well as greeting and serving restaurant guests. </p>
+				</div>
+				<div class="team_member">
+					<div class="member_img">
+						<img src="images/staff_Susan_Smith.jpg" alt="Picture of the head waitress of the restaurant, Susan Smith">
+					</div>
+					<h3>Susan Smith</h3>
+					<span>Head Waitress</span>
+					<p>Susan has been with us for 7 years and now has responsibilities include helping assign waitstaff tables, talking to patrons to ensure they have a good experience, and performing opening and closing duties. </p>
+				</div>
+				<div class="team_member">
+					<div class="member_img">
+						<img src="images/staff_John_McStay.jpg" alt="Picture of a waiter at the restaurant, John McStay">
+					</div>
+					<h3>John McStay</h3>
+					<span>Waiter</span>
+					<p>John started with Glasgow Italian Grill 3 years ago and was new to waitering. During that time John has grown to being an important member of staff. </p>
+				</div>
+				<div class="team_member">
+					<div class="member_img">
+						<img src="images/staff_Rosa_Ricci.jpg" alt="Picture of a waiter at the restaurant, Rosa Ricci">
+					</div>
+					<h3>Rosa Ricci</h3>
+					<span>Waitress</span>
+					<p>Rosa is a student from Rome and works part-time in the restaurant. Rosa has worked in restaurants in Rome, so has plenty of experience. </p>
+				</div>  
+			</div>
+		</div>
+	</section>
+<!-- The bottom content section containing the social media icons. -->
+	<section class="bottomcontent">
+			<div class="socials">
+				<h2>Get in touch!</h2>
+				<a href="https://www.facebook.com"><i aria-hidden="true" class="fa-brands fa-facebook" title="Facebook Icon"></i></a>
+				<a href="https://www.instagram.com"><i aria-hidden="true"  class="fa-brands fa-instagram" title="Instagram Icon"></i></a>
+				<a href="https://www.twitter.com"><i aria-hidden="true" class="fa-brands fa-twitter" title="Twitter Icon"></i></a>
+			</div>
+	</section>
+</section>
+</div>
+<!-- The div for positioning the sticky footer -->
+<div id="footerpusher"></div>
+<footer>
+<!-- The footer content, including the back to top button and contact info-->
+    <div id="footercontent">
+		<div class="contactinfo"><p class="address">19 Hatfield Drive  Anniesland  G120YE</p><p class="number">0141 9496 0555</p><p class="email">Italian.grill@glasgow</p><br>
+		<button class="jumpup" onclick="window.location.href='#maindiv'">Back to Top</button>
+		</div>
+    </div>
+</footer>
+</body>
+</html>
+

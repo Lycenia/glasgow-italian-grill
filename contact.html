@@ -1,0 +1,91 @@
+<!-- HTML BUT MAKE IT 5??? -->
+<!DOCTYPE html>
+<!-- w3schools said you should add a language so I did -->
+<html lang="en">
+<head>
+<!-- Specifying the character encoding, viewport width, adding keywords, author and description of the page.
+	Also linking the style sheet, google fonts, favicon and the kit for the social media buttons-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Nicola Harrison">
+	<meta name="keywords" content="Italian, Food, Dinner, Restaurant, Glasgow, Grill, Parties, Functions">
+	<meta name="description" content="Glasgow Italian Grill Website">
+    <title>Glasgow Italian Grill | Mama Mia! Here we go again!</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	<script src="https://kit.fontawesome.com/07ae7fcfe2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Creating the main div and nav bar as an unordered list. Adding the logo to the top of it and adding the
+		'current' styling to the link that the page is currently on -->
+<div id="maindiv"> 
+	<header>
+		<nav>
+			<ul id="menu">
+				<li id="logo"><a href="home.html"><img src="./images/logomini.png" alt="Glasgow Italian Grill Logo Mini"></a></li>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="staff.html">Staff</a></li>
+				<li id="current"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+<!-- Creating the banner, adding the text to it and adding the main logo on top of the banner. -->
+	<div id="banner">
+		<h2 id="banner-title">Mama Mia! Here we go again!</h2>
+		<div id="crest">	
+			<img src="./images/logo.png" alt="Glasgow Italian Grill Logo"><br>
+		</div>
+<!-- Creating the div containing the contact info at the top and bottom of the banner -->	
+		<div class="contactinfo"><p class="address">19 Hatfield Drive - Anniesland - G120YE</p><p class="number">0141 9496 0555</p><p class="email">Italian.grill@glasgow</p>
+		</div>
+	</div>
+<!-- Creating the slider that holds the content and slides up over the banner -->		
+	<section id="slider">
+<!-- Creating the dummy contact form and button linking to the confirmation page. -->
+		<div class="container">
+			<h1>Questions? Queries? We'd love to hear from you!</h1><br>
+				<input type="text" name="firstname" placeholder="First name">
+				<input type="text" name="lastname" placeholder="Second name">
+				<input type="text" name="phonenumber" placeholder="Phone number">
+				<input type="text" name="email" placeholder="Email">
+				<textarea name="contact" placeholder="Get in touch!" style="height:200px"></textarea>
+		</div>
+			<form id="button">
+				<button id="submit" formaction="thanks.html">Submit</button>
+			</form><br>
+				<h2>Come visit us soon!</h2><br>
+<!-- The bottom content section containing the map, image of the front of the restaurant and the social media buttons. -->
+	<section class="bottomcontent">
+				<h2>Here's how to find us</h2>
+				<object data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.6505339146474!2d-4.32152428450538!3d55.88607638917327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488845944433202b%3A0x5385fe8869e92f89!2s19%20Hatfield%20Dr%2C%20Glasgow%20G12%200YE!5e0!3m2!1sen!2suk!4v1648064383124!5m2!1sen!2suk">
+				</object>
+				<picture>
+					<source srcset="images/restaurantdes.jpg" media="(min-width: 1200px)">
+					<source srcset="images/restauranttab.jpg" media="(min-width: 900px)">
+					<img src="images/restaurantmob.jpg" alt="Picture of the front of the Glasgow Italian Grill building.">
+				</picture>
+				<div class="socials">
+					<a href="https://www.facebook.com"><i aria-hidden="true" class="fa-brands fa-facebook" title="Facebook Icon"></i></a>
+					<a href="https://www.instagram.com"><i aria-hidden="true"  class="fa-brands fa-instagram" title="Instagram Icon"></i></a>
+					<a href="https://www.twitter.com"><i aria-hidden="true" class="fa-brands fa-twitter" title="Twitter Icon"></i></a>
+				</div>
+	</section>
+	</section>
+</div>
+<!-- The div for positioning the sticky footer -->
+<div id="footerpusher"></div>
+<footer>
+<!-- The footer content, including the back to top button and contact info-->
+    <div id="footercontent">
+		<div class="contactinfo"><p class="address">19 Hatfield Drive  Anniesland  G120YE</p><p class="number">0141 9496 0555</p><p class="email">Italian.grill@glasgow</p><br>
+		<button class="jumpup" onclick="window.location.href='#maindiv'">Back to Top</button>
+		</div>
+    </div>
+</footer>
+</body>
+</html>
+
